@@ -1,5 +1,4 @@
 // get API : https://api.coinpaprika.com/v1/coins
-//hello github
 
 import 'package:flutter/material.dart';
 
