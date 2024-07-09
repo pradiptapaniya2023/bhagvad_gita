@@ -92,9 +92,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontFamily: "fontfamily", color: Colors.yellow, fontSize: 17),
             ),
           ),
-
+          Padding(
+            padding: const EdgeInsets.only(top: 15 , left: 20 , right: 20),
+            child: Container(
+              height: 200,
+              width: double.infinity,
+              decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+              child: PageView(
+                children: [
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
   }
 }
+
+
