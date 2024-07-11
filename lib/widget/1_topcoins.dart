@@ -7,12 +7,13 @@ class Appwidgets {
     String top3, String center1, String bottom1,
   ) {
     return Container(
-      height: 102,
-      width: 160,
+      height: 100,
+      width: 170,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
       child: Card(
-        color: Colors.white,
-        elevation: 9,
-        shadowColor: Colors.white,
+        color: Color(0xFFFAF6E0),
+        elevation: 5,
+        shadowColor: Color(0xFF898055),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -20,52 +21,52 @@ class Appwidgets {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 4),
+                  padding: const EdgeInsets.only(top: 5),
                   child: Container(
-                    height: 26,
-                    width: 48,
+                    height: 20,
+                    width: 50,
                     decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(8)),
+                        color: Color(0xFF1E1E1E),
+                        borderRadius: BorderRadius.circular(5)),
                     child: Center(
                       child: Text(
                         top1,
                         style: TextStyle(
-                            fontFamily: "regfont", color: Colors.white),
+                            fontFamily: "regfont", color: Color(0xFFFAF6E0)),
                       ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 4),
+                  padding: const EdgeInsets.only(top: 5),
                   child: Container(
-                    height: 26,
-                    width: 48,
+                    height: 20,
+                    width: 50,
                     decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(8)),
+                        color: Color(0xFF1E1E1E),
+                        borderRadius: BorderRadius.circular(5)),
                     child: Center(
                       child: Text(
                         top2,
                         style: TextStyle(
-                            fontFamily: "regfont", color: Colors.white),
+                            fontFamily: "regfont", color: Color(0xFFFAF6E0)),
                       ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 4),
+                  padding: const EdgeInsets.only(top: 5),
                   child: Container(
-                    height: 26,
-                    width: 48,
+                    height: 20,
+                    width: 50,
                     decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(8)),
+                        color: Color(0xFF1E1E1E),
+                        borderRadius: BorderRadius.circular(5)),
                     child: Center(
                       child: Text(
                         top3,
                         style: TextStyle(
-                            fontFamily: "regfont", color: Colors.white),
+                            fontFamily: "regfont", color: Color(0xFFFAF6E0)),
                       ),
                     ),
                   ),
@@ -79,24 +80,24 @@ class Appwidgets {
                   child: Text(
                     center1,
                     style: TextStyle(
-                        fontFamily: "regfont", fontWeight: FontWeight.bold , fontSize: 18),
+                        fontFamily: "regfont", fontWeight: FontWeight.w700 , fontSize: 22 , color: Color(0xFF1E1E1E)),
                   ),
                 )
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 4 , left: 5),
+              padding: const EdgeInsets.only(top: 5 , left: 5),
               child: Container(
-                height: 26,
-                width: 48,
+                height: 20,
+                width: 47,
                 decoration: BoxDecoration(
-                    color: Colors.green[900],
-                    borderRadius: BorderRadius.circular(8)),
+                    color: Color(0xFF328B45),
+                    borderRadius: BorderRadius.circular(5)),
                 child: Center(
                   child: Text(
                     bottom1,
                     style: TextStyle(
-                        fontFamily: "regfont", color: Colors.white),
+                        fontFamily: "regfont", color: Color(0xFFFAF6E0)),
                   ),
                 ),
               ),

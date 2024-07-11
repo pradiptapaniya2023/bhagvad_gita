@@ -16,20 +16,20 @@ class _HomeScreenState extends State<HomeScreen> {
     PageController pgController = PageController();
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1E1E1E),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF1E1E1E),
         leading: IconButton(
             onPressed: () {},
             icon: Icon(
               Icons.menu,
-              color: Colors.white60,
+              color: Color(0xFFD9D9D9),
             )),
         title: Text(
           "Coin King",
           style: TextStyle(
               fontFamily: "fontfamily",
-              color: Colors.yellow,
+              color: Color(0xFFFCCF00),
               fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 45,
                     width: 285,
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFFFAF6E0),
                         borderRadius: BorderRadius.circular(10)),
                     child: TextField(
                       cursorColor: Colors.black,
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 45,
                   width: 50,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Color(0xFFFAF6E0),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
@@ -94,7 +94,9 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Text(
               "Top Coins",
               style: TextStyle(
-                  fontFamily: "fontfamily", color: Colors.yellow, fontSize: 17),
+                  fontFamily: "fontfamily",
+                  color: Color(0xFFFCCF00),
+                  fontSize: 17),
             ),
           ),
           Padding(
@@ -145,8 +147,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           dotHeight: 8,
                           dotWidth: 8,
                           spacing: 8,
-                          dotColor: Colors.white,
-                          activeDotColor: Colors.yellow),
+                          dotColor: Color(0xFFFAEEB6),
+                          activeDotColor: Color(0xFFFCCF00)),
                     )
                   ],
                 )),
@@ -156,10 +158,97 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Text(
               "Coins",
               style: TextStyle(
-                  fontFamily: "fontfamily", color: Colors.yellow, fontSize: 17),
+                  fontFamily: "fontfamily",
+                  color: Color(0xFFFCCF00),
+                  fontSize: 17),
             ),
           ),
-
+          Expanded(
+              child: Padding(
+            padding: const EdgeInsets.only(top: 5, left: 13, right: 13),
+            child: ListView.builder(
+              itemCount: 15,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(3.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        height: 30,
+                        width: 30,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Color(0xFFD9D9D9)),
+                        child: Center(
+                          child: Text(
+                            "$index",
+                            style: TextStyle(
+                                fontFamily: "regfont",
+                                color: Color(0xFF000000),
+                                fontSize: 20),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 30,
+                        width: 284,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Color(0xFFD9D9D9)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 5),
+                              child: Container(
+                                height: 25,
+                                width: 25,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Color(0xFF328B45)),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(right: 110, left: 5),
+                              child: Text(
+                                "BTC - Bitcoin",
+                                style: TextStyle(
+                                    color: Color(0xFF000000),
+                                    fontFamily: "regfont",
+                                    fontSize: 18),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 5),
+                              child: Image.asset(
+                                "asset/images/coin_icon.png",
+                                width: 25,
+                                height: 25,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Color(0xFFD9D9D9)),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Image.asset(
+                              "asset/images/right_arrow_icon.png",
+                            ),
+                          )),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ))
         ],
       ),
     );
